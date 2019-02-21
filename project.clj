@@ -1,5 +1,5 @@
 (defproject film-ratings "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
+  :description "https://circleci.com/blog/build-a-clojure-web-app-using-duct/"
   :url "http://example.com/FIXME"
   :min-lein-version "2.0.0"
   :dependencies [[org.clojure/clojure "1.10.0"]
@@ -11,6 +11,7 @@
                  [org.xerial/sqlite-jdbc "3.25.2"]]
   :plugins [[duct/lein-duct "0.11.2"]]
   :main ^:skip-aot film-ratings.main
+  :uberjar-name "film-ratings.jar"
   :resource-paths ["resources" "target/resources"]
   :prep-tasks     ["javac" "compile" ["run" ":duct/compiler"]]
   :middleware     [lein-duct.plugin/middleware]
